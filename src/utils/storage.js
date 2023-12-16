@@ -1,5 +1,7 @@
 // 约定一个通用的键名
+// 个人信息
 const INFO_KEY = 'hm_shopping_info'
+// 搜索历史
 const HISTORY_KEY = 'hm_history_list'
 
 // 获取个人信息

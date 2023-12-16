@@ -12,6 +12,7 @@ export default {
     // 所有mutations的第一个参数都是state
     setUserInfo (state, obj) {
       state.userInfo = obj
+      // 进行持久化处理
       setInfo(obj)
     }
   },

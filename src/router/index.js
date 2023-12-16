@@ -56,17 +56,17 @@ const router = new VueRouter({
 // 全局前置导航守卫
 // 所有的路由在真正被访问之前，都会经过全局前置守卫
 // 只有全局前守卫放行，才能跳转
-/**
- * to 到哪里去
- * from 从哪里来，包含完整的路由对象（路径，参数）
- * next() 是否放行，包含完整的路由对象（路径，参数）
- * (1) next() 表示放行
- * (2) next(路径) 进行拦截，跳转到next里的路径
- *  */
 
 // 定义一个数组，存储所有需要登陆权证的页面
 const authUrls = ['/pay', '/myorder']
 
+/**
+ * @param to 到哪里去
+ * @param from 从哪里来，包含完整的路由对象（路径，参数）
+ * @param next() 是否放行，包含完整的路由对象（路径，参数）
+ * (1) next() 表示放行
+ * (2) next(路径) 进行拦截，跳转到next里的路径
+ *  */
 router.beforeEach((to, from, next) => {
   // 查看to.path是否在authUrls中
   if (!authUrls.includes(to.path)) {

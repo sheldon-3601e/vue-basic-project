@@ -15,9 +15,11 @@ import {
   SwipeItem,
   Grid,
   GridItem,
-  Dialog, Checkbox
+  Dialog, Checkbox, Tabs, Tab
 } from 'vant'
 
+Vue.use(Tab)
+Vue.use(Tabs)
 Vue.use(Checkbox)
 Vue.use(Dialog)
 Vue.use(ActionSheet)

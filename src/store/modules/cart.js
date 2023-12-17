@@ -67,11 +67,10 @@ export default {
     },
     async changeCountAction (context, obj) {
       const { goodsId, goodsSkuId, goodsNum } = obj
-      const res = await changeCount(goodsId, goodsNum, goodsSkuId)
       // 先本地修改
       context.commit('changeCount', { goodsId, goodsNum })
       // 再同步到后台
-      console.log(res)
+      await changeCount(goodsId, goodsNum, goodsSkuId)
     },
     // 删除商品
     async delSelect (context) {
